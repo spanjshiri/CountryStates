@@ -1,0 +1,47 @@
+<br><br><br>
+<div style="text-align: center">
+<!--This is the form that allows the user to add a new country to the web api.-->
+    <h1>Add a Country</h1>
+    <form class="form-horizontal" #f="ngForm">
+        <div style="display:inline-block" class="form-group field">
+          <label for="CountryName" class="frm_primary_label">
+            <b>Country Name</b><span class="frm_required">*</span>
+          </label><br>
+          <input type="text" class="form-control" placeholder="Country Name" name="inputCountryName" [(ngModel)]="new_CountryName" #CountryName="ngModel" required>
+        </div>
+        <div style="display:inline-block" class="form-group field">
+          <label for="CountryCode" class="frm_primary_label">
+            <b>Country Code</b><span class="frm_required">*</span>
+          </label><br>
+          <input type="text" class="form-control" placeholder="Country Code" name="inputCountryCode" [(ngModel)]="new_CountryCode" #CountryCode="ngModel" required>
+        </div>
+        <button type="reset" (click)="f.reset()">Cancel</button>
+        <input type="submit" (click)="addCountry(new_CountryCode, new_CountryName); f.reset()"/>
+      </form>
+      <br><br><br>
+    
+      <!--This is the form that allows the user to add a new state to the web api.-->
+      <h1>Add a State</h1>
+      <form class="form-horizontal" #g="ngForm">
+        <div style="display:inline-block" class="form-group field">
+          <label for="StateName" class="frm_primary_label">
+            <b>State Name</b><span class="frm_required">*</span>
+          </label><br>
+          <input type="text" class="form-control" placeholder="State Name" name="inputStateName" [(ngModel)]="new_StateName" #CountryName="ngModel" required>
+        </div>
+        <div style="display:inline-block" class="form-group field">
+          <label for="CountryCode" class="frm_primary_label">
+            <b>State Code</b><span class="frm_required">*</span>
+          </label><br>
+          <input type="text" class="form-control" placeholder="State Code" name="inputStateCode" [(ngModel)]="new_StateCode" #CountryCode="ngModel" required>
+        </div>
+        <div style="display:inline-block" class="form-group field">
+          <label for="CountryCode1" class="frm_primary_label">
+            <b>Country Code</b><span class="frm_required">*</span>
+          </label><br>
+          <input type="text" class="form-control" placeholder="Country Code" name="inputCountryCode1" [(ngModel)]="new_CountryCode1" #CountryCode1="ngModel" required>
+        </div>
+        <button type="reset" (click)="g.reset()">Cancel</button>
+        <input type="submit" (click)="addState(new_StateCode, new_StateName, new_CountryCode1); g.reset()"/>
+      </form>
+      <img class="bg" src="https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2017/11/14/BostonGlobe.com/EditorialOpinion/Images/7717ea8e89bc41dca4f14eb8861dd678-063d1b09eb484109851dd42aa17c5af0-0.jpg">

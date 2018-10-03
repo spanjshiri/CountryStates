@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      Onboarding Country States Project
+    </h1>
+    <!--This is the dropdown that is populated with the countries from the web api.-->
+    <div>
+      <label for="Country" class="frm_primary_label">
+        <b>Select a Country</b><span class="frm_required">*</span>
+      </label><br>
+      <!-- This is the dropdown list of countries -->
+        <select  [formControl]="selectform.controls['id']" (change)="getStateList($event.target.value)">  
+          <option *ngFor="let country of countries"  [value]='country.code'>{{country.name}}</option>  
+        </select>  
+    </div>  
+    <div>
+      <!-- This is the dropdown list of states-->
+      <select  [formControl]="selectform.controls['id']">  
+        <option *ngFor="let state of states"  value={state.id}}>{{state.name}}</option>  
+      </select>
+    </div>  
+    <img class="bg" src="https://ubisafe.org/images/trump-transparent-3.png">
