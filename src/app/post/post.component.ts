@@ -33,12 +33,13 @@ export class PostComponent implements OnInit{
     });
   }
 
-  addState(stateCode, stateName, countryCode){
-    let CountryCode  = { countryCode : countryCode };
-    let StateCode  = { code : stateCode };
-    let StateName = { name: stateName };
-    var AppComponent = this;
-    var apiPromise = AppComponent.dataService.postState(StateCode, StateName, CountryCode).toPromise();
+  addState(stateCode, stateName, countryCode) {
+    // const CountryCode  = { countryCode : countryCode };
+    // const StateCode  = { code : stateCode };
+    // const StateName = { name: stateName };
+    const AppComponent = this;
+    const state = { code : stateCode, name : stateName,  } as State;
+    const apiPromise = AppComponent.dataService.postState(state, countryCode).toPromise();
     apiPromise.then(res => {
       window.alert('You have successfully a state!');
       console.log('You have added a new state successfully!');

@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { GetComponent } from './get/get.component';
-import { SpookyComponent } from './spooky/spooky.component';
 import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
@@ -14,8 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     PostComponent,
-    GetComponent,
-    SpookyComponent
+    GetComponent
   ],
   imports: [
     BrowserModule,
